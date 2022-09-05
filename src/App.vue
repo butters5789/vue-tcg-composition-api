@@ -5,8 +5,8 @@
     <button @click="setAge">Set Age</button>
 
     <div>
-      <input type="text" placeholder="First Name" @input="setFirstName" />
-      <input type="text" placeholder="Last Name" @input="setLastName" />
+      <input type="text" placeholder="First Name" v-model="firstName" />
+      <input type="text" placeholder="Last Name" v-model="lastName" />
     </div>
   </section>
 </template>
@@ -31,14 +31,6 @@ setTimeout(() => {
 
 function setAge() {
   user.age = 34;
-}
-
-function setFirstName(event) {
-  firstName.value = event.target.value;
-}
-
-function setLastName(event) {
-  lastName.value = event.target.value;
 }
 </script>
 
