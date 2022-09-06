@@ -4,11 +4,13 @@
 </template>
 
 <script setup>
-import { computed, defineProps } from 'vue';
+import { computed, defineProps, inject } from 'vue';
 
-const props = defineProps(['firstName', 'lastName', 'age']);
+const props = defineProps(['firstName', 'lastName']);
 
 const name = computed(() => `${props.firstName} ${props.lastName}`);
+
+const age = inject('age');
 
 // export default {
 //   props: ['firstName', 'lastName', 'age'],
